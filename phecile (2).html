@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phé-cile — Calculateur PKU</title>
+<meta name="description" content="La Phé facile ! Calculer les parts de phénylalanine — France, 1 part = 20 mg">
+<meta name="theme-color" content="#0BBFBF">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Phé-cile">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<style>
+:root{
+  --tq:#0BBFBF;--navy:#1a3a8f;
+  --yw:#EFD800;--yw-l:#FFFAAA;--yw-t:#7A4F00;--yw-s:#A06200;
+  --gn-bg:#EAF3DE;--gn-b:#97C459;--gn-ic:#639922;--gn-t:#27500A;--gn-s:#3B6D11;
+  --co-bg:#FAECE7;--co-b:#F0997B;--co-ic:#D85A30;--co-t:#712B13;--co-s:#993C1D;
+  --w20:rgba(255,255,255,.20);--w12:rgba(255,255,255,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--tq);min-height:100vh;color:#1a1a1a}
+.app{max-width:480px;margin:0 auto;min-height:100vh;background:var(--tq)}
+.screen{display:none;animation:fi .18s ease}
+.screen.active{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.home-hdr{padding:44px 20px 18px}
+.logo{font-size:38px;font-weight:700;letter-spacing:-1.5px;color:#fff;line-height:1}
+.logo span{color:var(--navy)}
+.slogan{font-size:18px;font-weight:700;color:var(--yw);margin-top:6px;letter-spacing:-.3px}
+.tagline{font-size:13px;color:#fff;margin-top:5px;font-weight:500;line-height:1.5;opacity:.95}
+.tagline em{font-size:12px;font-weight:400;opacity:.82;font-style:italic;display:block;margin-top:2px}
+.sec-label{padding:4px 16px 10px;font-size:11px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.8px;opacity:.8}
+.cards{padding:0 12px;display:flex;flex-direction:column;gap:10px}
+.mc{width:100%;border-radius:18px;padding:14px 15px;border:2.5px solid;cursor:pointer;display:flex;align-items:flex-start;gap:12px;text-align:left;transition:transform .12s;background:none}
+.mc:active{transform:scale(.97)}
+.mc.yw{background:var(--yw-l);border-color:var(--yw)}
+.mc.gn{background:var(--gn-bg);border-color:var(--gn-b)}
+.mc.co{background:var(--co-bg);border-color:var(--co-b)}
+.mi{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;margin-top:2px}
+.mi.yw{background:var(--yw);color:var(--yw-t)}
+.mi.gn{background:var(--gn-ic);color:#fff}
+.mi.co{background:var(--co-ic);color:#fff}
+.mt{font-size:13px;font-weight:700;line-height:1.3}
+.ms{font-size:11px;line-height:1.45;margin-top:4px}
+.yw .mt{color:var(--yw-t)}.yw .ms{color:var(--yw-s)}
+.gn .mt{color:var(--gn-t)}.gn .ms{color:var(--gn-s)}
+.co .mt{color:var(--co-t)}.co .ms{color:var(--co-s)}
+.ftcards{padding:12px 12px 0;display:flex;flex-direction:column;gap:8px}
+.ic{border-radius:12px;padding:10px 13px;display:flex;align-items:flex-start;gap:9px;font-size:11px;color:#fff;line-height:1.6}
+.ic.src{background:var(--w20)}
+.ic.hrt{background:var(--w12);margin-bottom:24px;flex-direction:column;gap:6px}
+.ic-i{font-size:17px;flex-shrink:0;margin-top:1px}
+.ic.hrt .ic-i{color:var(--yw-l)}
+.code-link{background:var(--yw);border:none;border-radius:8px;padding:4px 10px;font-size:11px;font-weight:700;color:var(--yw-t);cursor:pointer;font-family:inherit;margin-left:4px}
+.code-link:active{opacity:.85}
+.ch{padding:20px 16px 18px}
+.ch.yw{background:var(--yw)}
+.ch.gn{background:var(--gn-ic)}
+.ch.co{background:var(--co-ic)}
+.br{display:flex;align-items:center;gap:9px;margin-bottom:14px;cursor:pointer;width:fit-content}
+.bc{width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.yw .bc{background:var(--yw-l);color:var(--yw-t)}
+.gn .bc,.co .bc{background:var(--w20);color:#fff}
+.bl{font-size:13px;font-weight:500}
+.yw .bl{color:var(--yw-t)}
+.gn .bl,.co .bl{color:rgba(255,255,255,.88)}
+.mb{display:inline-block;border-radius:20px;padding:3px 12px;font-size:11px;font-weight:700;margin-bottom:7px}
+.yw .mb{background:var(--yw-l);color:var(--yw-t)}
+.gn .mb,.co .mb{background:var(--w20);color:#fff}
+.ct{font-size:18px;font-weight:700;line-height:1.25}
+.yw .ct{color:var(--yw-t)}
+.gn .ct,.co .ct{color:#fff}
+.cb{padding:16px 16px 40px}
+.ib{background:var(--w20);border-radius:10px;padding:10px 13px;font-size:12px;color:#fff;line-height:1.5;margin-bottom:18px}
+.fd{margin-bottom:15px}
+.fl{font-size:11px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.5px;margin-bottom:7px;display:block}
+input[type=number],input[type=text],select{width:100%;padding:12px 14px;border:2.5px solid;border-radius:12px;font-size:15px;font-weight:700;outline:none;appearance:none;-webkit-appearance:none;background:#fff;color:#1a1a1a;font-family:inherit}
+.yw-m input[type=number],.yw-m input[type=text],.yw-m select{border-color:var(--yw)}
+.gn-m input[type=number],.gn-m input[type=text],.gn-m select{border-color:var(--gn-b)}
+.co-m input[type=number],.co-m input[type=text],.co-m select{border-color:var(--co-b)}
+input[type=text]{font-weight:400}
+input::placeholder{color:#bbb;font-weight:400}
+select[size]{padding:6px;height:178px;font-size:13px;font-weight:400;line-height:1.4}
+optgroup{font-size:11px;font-weight:700;color:#888;font-style:normal}
+option{padding:4px 6px;color:#1a1a1a}
+input[type=range]{width:100%;height:6px;border-radius:3px;outline:none;-webkit-appearance:none;appearance:none;background:rgba(255,255,255,.35);border:none;padding:0;cursor:pointer;margin:8px 0 4px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:#fff;border:3px solid;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.2)}
+.yw-m input[type=range]::-webkit-slider-thumb{border-color:var(--yw)}
+.gn-m input[type=range]::-webkit-slider-thumb{border-color:var(--gn-ic)}
+.co-m input[type=range]::-webkit-slider-thumb{border-color:var(--co-ic)}
+input[type=range]::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:#fff;border:3px solid;cursor:pointer}
+.yw-m input[type=range]::-moz-range-thumb{border-color:var(--yw)}
+.gn-m input[type=range]::-moz-range-thumb{border-color:var(--gn-ic)}
+.co-m input[type=range]::-moz-range-thumb{border-color:var(--co-ic)}
+.slider-val{display:flex;justify-content:space-between;align-items:baseline;margin-top:4px}
+.slider-num{font-size:24px;font-weight:700;color:#fff}
+.slider-unit{font-size:13px;color:rgba(255,255,255,.75)}
+.slider-minmax{font-size:10px;color:rgba(255,255,255,.55);display:flex;justify-content:space-between;margin-top:2px}
+.si{font-size:12px;font-weight:600;border-radius:8px;padding:8px 11px;margin-top:7px;display:none;line-height:1.4}
+.yw-m .si{background:var(--yw-l);color:var(--yw-t)}
+.rc{background:#fff;border:2.5px solid;border-radius:22px;padding:20px 16px;text-align:center;margin-top:4px}
+.yw-m .rc{border-color:var(--yw)}
+.gn-m .rc{border-color:var(--gn-b)}
+.co-m .rc{border-color:var(--co-b)}
+.rl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.9px;color:#aaa;margin-bottom:6px}
+.rv{font-size:56px;font-weight:700;color:var(--tq);line-height:1}
+.ru{font-size:16px;color:#888;margin-top:4px;font-weight:500}
+.rd{margin-top:14px;padding-top:14px;border-top:1.5px solid}
+.yw-m .rd{border-color:#F0E870}
+.gn-m .rd{border-color:var(--gn-bg)}
+.co-m .rd{border-color:var(--co-bg)}
+.rmb{display:inline-block;border-radius:20px;padding:5px 16px;font-size:13px;font-weight:700}
+.yw-m .rmb{background:var(--yw-l);color:var(--yw-t)}
+.gn-m .rmb{background:var(--gn-bg);color:var(--gn-t)}
+.co-m .rmb{background:var(--co-bg);color:var(--co-t)}
+.rref{font-size:10px;color:#bbb;margin-top:9px;line-height:1.5}
+.err{font-size:12px;color:#fff;background:rgba(200,40,40,.35);border-radius:8px;padding:8px 11px;margin-top:6px;display:none;line-height:1.5}
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- ACCUEIL -->
+<div id="s-home" class="screen active">
+  <div class="home-hdr">
+    <div class="logo">Phé-<span>cile</span></div>
+    <div class="slogan">la Phé facile !</div>
+    <p class="tagline">L'application pour facilement calculer les parts de phénylalanine<em>(mode de calcul en parts pour la France, 1 part = 20 mg de phé)</em></p>
+  </div>
+  <div class="sec-label">Choisir un mode de calcul</div>
+  <div class="cards">
+    <button class="mc yw" onclick="go('s-m1')">
+      <div class="mi yw">&#9776;</div>
+      <div><div class="mt">Liste d'aliments</div><div class="ms">Je choisis un légume ou un fruit nature et le poids et j'obtiens sa correspondance en part</div></div>
+    </button>
+    <button class="mc gn" onclick="go('s-m2')">
+      <div class="mi gn">&#11044;</div>
+      <div><div class="mt">Produit transformé sans lait végétal ni céréales — disque vert du Phetout</div><div class="ms">Fruits et légumes, sans lait végétal ni céréales — J'entre le taux de protéines et le poids et j'obtiens sa correspondance en part</div></div>
+    </button>
+    <button class="mc co" onclick="go('s-m3')">
+      <div class="mi co">&#11044;</div>
+      <div><div class="mt">Produit transformé avec lait, lait végétal, céréales ou pomme de terre seule — disque rouge du Phetout</div><div class="ms">Pomme de terre seule, ou aliment transformé avec lait, lait végétal ou céréales — J'entre le taux de protéines et le poids et j'obtiens sa correspondance en part</div></div>
+    </button>
+  </div>
+  <div class="ftcards">
+    <div class="ic src">
+      <span class="ic-i">&#8505;</span>
+      <span>Sources : Consensus SFEIM 2009 — Tableaux du Phetout — phenylcetonurie.org<br>Application non médicale — toujours vérifier avec votre diététicien(ne)</span>
+    </div>
+    <div class="ic hrt">
+      <div style="display:flex;align-items:flex-start;gap:9px;width:100%">
+        <span class="ic-i">&#10084;</span>
+        <span>Application faite maison par une maman d'enfant PKU pour aider le quotidien</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:9px;width:100%">
+        <span style="font-size:15px;flex-shrink:0">&#128187;</span>
+        <span>Voici le code en open source si besoin : <a href="phecile.txt" target="_blank" class="code-link">Voir le code source</a></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODE 1 -->
+<div id="s-m1" class="screen yw-m">
+  <div class="ch yw">
+    <div class="br" onclick="go('s-home')"><div class="bc">&#8592;</div><span class="bl">Retour</span></div>
+    <div class="mb">Liste d'aliments</div>
+    <div class="ct">Légume ou fruit nature</div>
+  </div>
+  <div class="cb">
+    <div class="ib">Recherchez l'aliment, sélectionnez-le, puis faites glisser le curseur pour ajuster le poids.</div>
+    <div class="fd">
+      <label class="fl" for="m1-search">Rechercher un aliment</label>
+      <input type="text" id="m1-search" placeholder="ex. fraise, carotte, pomme…" oninput="filterAliments()" autocomplete="off">
+    </div>
+    <div class="fd">
+      <label class="fl" for="m1-aliment">Sélectionner dans la liste</label>
+      <select id="m1-aliment" size="7" onchange="onSelect()"></select>
+      <div class="si" id="m1-info"></div>
+    </div>
+    <div class="fd">
+      <label class="fl">Poids consommé</label>
+      <input type="range" id="m1-slider" min="10" max="500" value="100" step="5" oninput="sliderUpdate('m1')">
+      <div class="slider-val"><span class="slider-num" id="m1-sv">100</span><span class="slider-unit">grammes</span></div>
+      <div class="slider-minmax"><span>10 g</span><span>500 g</span></div>
+    </div>
+    <div class="rc" id="m1-res">
+      <div class="rl">Quantité de phé</div>
+      <div class="rv" id="m1-parts">—</div>
+      <div class="ru">parts</div>
+      <div class="rd"><div class="rmb" id="m1-mg">Sélectionnez un aliment</div></div>
+      <div class="rref" id="m1-ref"></div>
+    </div>
+  </div>
+</div>
+
+<!-- MODE 2 -->
+<div id="s-m2" class="screen gn-m">
+  <div class="ch gn">
+    <div class="br" onclick="go('s-home')"><div class="bc">&#8592;</div><span class="bl">Retour</span></div>
+    <div class="mb">Disque vert du Phetout</div>
+    <div class="ct">Produit transformé sans lait végétal ni céréales</div>
+  </div>
+  <div class="cb">
+    <div class="ib">Sans lait végétal ni céréales. Entrez le taux de protéines de l'étiquette (g pour 100 g) puis faites glisser le curseur pour le poids.</div>
+    <div class="fd">
+      <label class="fl" for="m2-prot">Protéines (g pour 100 g d'aliment)</label>
+      <input type="number" id="m2-prot" min="0.1" max="2.0" step="0.1" placeholder="ex. 1.2" oninput="calcLive('m2')">
+      <div class="err" id="m2-err">⚠ Valeur hors plage des abaques (0,1 à 2,0 g/100g), ce produit n'est peut-être pas adapté au régime PKU. Consulter votre diététicien(ne) pour en savoir plus.</div>
+    </div>
+    <div class="fd">
+      <label class="fl">Poids consommé</label>
+      <input type="range" id="m2-slider" min="10" max="500" value="100" step="5" oninput="sliderUpdate('m2')">
+      <div class="slider-val"><span class="slider-num" id="m2-sv">100</span><span class="slider-unit">grammes</span></div>
+      <div class="slider-minmax"><span>10 g</span><span>500 g</span></div>
+    </div>
+    <div class="rc" id="m2-res">
+      <div class="rl">Quantité de phé</div>
+      <div class="rv" id="m2-parts">—</div>
+      <div class="ru">parts</div>
+      <div class="rd"><div class="rmb" id="m2-mg">Entrez le taux de protéines</div></div>
+      <div class="rref" id="m2-ref"></div>
+    </div>
+  </div>
+</div>
+
+<!-- MODE 3 -->
+<div id="s-m3" class="screen co-m">
+  <div class="ch co">
+    <div class="br" onclick="go('s-home')"><div class="bc">&#8592;</div><span class="bl">Retour</span></div>
+    <div class="mb">Disque rouge du Phetout</div>
+    <div class="ct">Produit transformé avec lait, lait végétal, céréales ou pomme de terre seule</div>
+  </div>
+  <div class="cb">
+    <div class="ib">Pomme de terre seule, ou aliment transformé avec lait, lait végétal ou céréales. Entrez le taux de protéines de l'étiquette puis faites glisser le curseur pour le poids.</div>
+    <div class="fd">
+      <label class="fl" for="m3-prot">Protéines (g pour 100 g d'aliment)</label>
+      <input type="number" id="m3-prot" min="0.3" max="2.5" step="0.1" placeholder="ex. 1.8" oninput="calcLive('m3')">
+      <div class="err" id="m3-err">⚠ Valeur hors plage des abaques (0,3 à 2,5 g/100g), ce produit n'est peut-être pas adapté au régime PKU. Consulter votre diététicien(ne) pour en savoir plus.</div>
+    </div>
+    <div class="fd">
+      <label class="fl">Poids consommé</label>
+      <input type="range" id="m3-slider" min="10" max="500" value="100" step="5" oninput="sliderUpdate('m3')">
+      <div class="slider-val"><span class="slider-num" id="m3-sv">100</span><span class="slider-unit">grammes</span></div>
+      <div class="slider-minmax"><span>10 g</span><span>500 g</span></div>
+    </div>
+    <div class="rc" id="m3-res">
+      <div class="rl">Quantité de phé</div>
+      <div class="rv" id="m3-parts">—</div>
+      <div class="ru">parts</div>
+      <div class="rd"><div class="rmb" id="m3-mg">Entrez le taux de protéines</div></div>
+      <div class="rref" id="m3-ref"></div>
+    </div>
+  </div>
+</div>
+    </div>
+    <pre id="code-pre" style="padding:14px;color:#a6e3a1;font-size:10.5px;line-height:1.6;white-space:pre-wrap;word-break:break-word;font-family:'Courier New',Courier,monospace;margin:0;background:#1e1e2e;"></pre>
+  </div>
+</div>
+
+</div><!-- fin .app -->
+<script>
+var A=[
+  {c:"Fruits frais",n:"Abricot",g:40},
+  {c:"Fruits frais",n:"Ananas",g:95},
+  {c:"Fruits frais",n:"Baie de sureau",g:50},
+  {c:"Fruits frais",n:"Banane",g:40},
+  {c:"Fruits frais",n:"Carambole / fruit étoile",g:45},
+  {c:"Fruits frais",n:"Cassis",g:45},
+  {c:"Fruits frais",n:"Cerise",g:85},
+  {c:"Fruits frais",n:"Citron",g:80},
+  {c:"Fruits frais",n:"Citron lime",g:95},
+  {c:"Fruits frais",n:"Clémentine / Mandarine / Tangerine",g:80},
+  {c:"Fruits frais",n:"Coing",g:165},
+  {c:"Fruits frais",n:"Corossol",g:60},
+  {c:"Fruits frais",n:"Figue",g:110},
+  {c:"Fruits frais",n:"Figue de Barbarie / Nopale",g:40},
+  {c:"Fruits frais",n:"Fraise",g:105},
+  {c:"Fruits frais",n:"Framboise",g:55},
+  {c:"Fruits frais",n:"Fruit de la passion / grenadille",g:30},
+  {c:"Fruits frais",n:"Goyave",g:65},
+  {c:"Fruits frais",n:"Grenade",g:70},
+  {c:"Fruits frais",n:"Groseille / gadelle rouge et blanche",g:45},
+  {c:"Fruits frais",n:"Kaki",g:75},
+  {c:"Fruits frais",n:"Kiwi",g:45},
+  {c:"Fruits frais",n:"Kumquat",g:35},
+  {c:"Fruits frais",n:"Litchi",g:60},
+  {c:"Fruits frais",n:"Mangue",g:200},
+  {c:"Fruits frais",n:"Melon",g:85},
+  {c:"Fruits frais",n:"Mirabelle",g:90},
+  {c:"Fruits frais",n:"Mûre",g:50},
+  {c:"Fruits frais",n:"Myrtille",g:85},
+  {c:"Fruits frais",n:"Nashi / poire asiatique",g:155},
+  {c:"Fruits frais",n:"Nectarine / Brugnon",g:180},
+  {c:"Fruits frais",n:"Nèfle du Japon",g:145},
+  {c:"Fruits frais",n:"Orange",g:65},
+  {c:"Fruits frais",n:"Pamplemousse blanc",g:55},
+  {c:"Fruits frais",n:"Pamplemousse rose",g:55},
+  {c:"Fruits frais",n:"Papaye",g:400},
+  {c:"Fruits frais",n:"Pastèque",g:135},
+  {c:"Fruits frais",n:"Pêche",g:105},
+  {c:"Fruits frais",n:"Poire",g:180},
+  {c:"Fruits frais",n:"Pomme",g:285},
+  {c:"Fruits frais",n:"Pomme cannelle",g:30},
+  {c:"Fruits frais",n:"Prune",g:145},
+  {c:"Fruits frais",n:"Raisin blanc et noir",g:105},
+  {c:"Fruits frais",n:"Rhubarbe",g:120},
+  {c:"Fruits frais",n:"Sapote",g:35},
+  {c:"Fruits frais",n:"Sapotille",g:145},
+  {c:"Légumes natures",n:"Ail (petite quantité à négliger)",g:10},
+  {c:"Légumes natures",n:"Artichaut",g:15},
+  {c:"Légumes natures",n:"Asperge",g:30},
+  {c:"Légumes natures",n:"Aubergine",g:55},
+  {c:"Légumes natures",n:"Avocat",g:10},
+  {c:"Légumes natures",n:"Banane plantain",g:75},
+  {c:"Légumes natures",n:"Bette / carde",g:20},
+  {c:"Légumes natures",n:"Betterave",g:40},
+  {c:"Légumes natures",n:"Brocoli",g:15},
+  {c:"Légumes natures",n:"Carotte crue (100 g cuite)",g:55},
+  {c:"Légumes natures",n:"Carotte cuite (55 g crue)",g:100},
+  {c:"Légumes natures",n:"Céleri branche cru / cœur cru (85 g cuit)",g:100},
+  {c:"Légumes natures",n:"Céleri branche cuit / cœur cuit (100 g cru)",g:85},
+  {c:"Légumes natures",n:"Céleri-rave",g:40},
+  {c:"Légumes natures",n:"Champignon de Paris",g:20},
+  {c:"Légumes natures",n:"Châtaigne / marron",g:25},
+  {c:"Légumes natures",n:"Chou blanc",g:65},
+  {c:"Légumes natures",n:"Chou de Bruxelles",g:20},
+  {c:"Légumes natures",n:"Chou de Chine / pet-saï",g:45},
+  {c:"Légumes natures",n:"Chou romanesco",g:20},
+  {c:"Légumes natures",n:"Chou rouge cru (40 g cuit)",g:80},
+  {c:"Légumes natures",n:"Chou rouge cuit (80 g cru)",g:40},
+  {c:"Légumes natures",n:"Chou vert frisé",g:10},
+  {c:"Légumes natures",n:"Chou-fleur",g:30},
+  {c:"Légumes natures",n:"Chou-rave",g:50},
+  {c:"Légumes natures",n:"Christophine / chayote",g:55},
+  {c:"Légumes natures",n:"Citrouille / potiron cru (85 g cuit)",g:60},
+  {c:"Légumes natures",n:"Citrouille / potiron cuit (60 g cru)",g:85},
+  {c:"Légumes natures",n:"Civette (petite quantité à négliger)",g:10},
+  {c:"Légumes natures",n:"Cœurs de palmiers",g:20},
+  {c:"Légumes natures",n:"Concombre",g:105},
+  {c:"Légumes natures",n:"Cornichon (petite quantité à négliger)",g:175},
+  {c:"Légumes natures",n:"Courge spaghetti",g:45},
+  {c:"Légumes natures",n:"Courgette longue",g:45},
+  {c:"Légumes natures",n:"Courgette ronde",g:45},
+  {c:"Légumes natures",n:"Crosne",g:10},
+  {c:"Légumes natures",n:"Échalote (petite quantité à négliger)",g:30},
+  {c:"Légumes natures",n:"Endive / chicorée de Bruxelles / witloof",g:90},
+  {c:"Légumes natures",n:"Épinards",g:15},
+  {c:"Légumes natures",n:"Fenouil",g:40},
+  {c:"Légumes natures",n:"Feuille de vigne",g:25},
+  {c:"Légumes natures",n:"Fruit à pain",g:75},
+  {c:"Légumes natures",n:"Germes de soja / haricots mango",g:25},
+  {c:"Légumes natures",n:"Gombo / Okra",g:30},
+  {c:"Légumes natures",n:"Haricots beurre crus (35 g cuits)",g:25},
+  {c:"Légumes natures",n:"Haricots beurre cuits (25 g crus)",g:35},
+  {c:"Légumes natures",n:"Haricots verts crus (35 g cuits)",g:25},
+  {c:"Légumes natures",n:"Haricots verts cuits (25 g crus)",g:35},
+  {c:"Légumes natures",n:"Igname",g:30},
+  {c:"Légumes natures",n:"Maïs",g:15},
+  {c:"Légumes natures",n:"Manioc",g:45},
+  {c:"Légumes natures",n:"Navet cru (140 g cuit)",g:115},
+  {c:"Légumes natures",n:"Navet cuit (115 g cru)",g:140},
+  {c:"Légumes natures",n:"Oignon (petite quantité à négliger)",g:65},
+  {c:"Légumes natures",n:"Oseille",g:15},
+  {c:"Légumes natures",n:"Panais",g:35},
+  {c:"Légumes natures",n:"Patate douce",g:20},
+  {c:"Légumes natures",n:"Pâtisson",g:45},
+  {c:"Légumes natures",n:"Persil (petite quantité à négliger)",g:15},
+  {c:"Légumes natures",n:"Petits pois",g:10},
+  {c:"Légumes natures",n:"Piment cru (petite quantité à négliger)",g:30},
+  {c:"Légumes natures",n:"Piment cuit (petite quantité à négliger)",g:60},
+  {c:"Légumes natures",n:"Pissenlit",g:15},
+  {c:"Légumes natures",n:"Poireau cru (65 g cuit)",g:35},
+  {c:"Légumes natures",n:"Poireau cuit (35 g cru)",g:65},
+  {c:"Légumes natures",n:"Pois plats ou pois gourmands",g:20},
+  {c:"Légumes natures",n:"Poivron",g:70},
+  {c:"Légumes natures",n:"Pomme de terre",g:20},
+  {c:"Légumes natures",n:"Potimarron cru (85 g cuit)",g:60},
+  {c:"Légumes natures",n:"Potimarron cuit (60 g cru)",g:85},
+  {c:"Légumes natures",n:"Pousse de bambou crue (35 g cuite)",g:20},
+  {c:"Légumes natures",n:"Pousse de bambou cuite (20 g crue)",g:35},
+  {c:"Légumes natures",n:"Radis noir",g:100},
+  {c:"Légumes natures",n:"Radis rose",g:85},
+  {c:"Légumes natures",n:"Raifort",g:45},
+  {c:"Légumes natures",n:"Rutabaga",g:60},
+  {c:"Légumes natures",n:"Salade chicorée",g:30},
+  {c:"Légumes natures",n:"Salade cresson",g:15},
+  {c:"Légumes natures",n:"Salade laitue",g:30},
+  {c:"Légumes natures",n:"Salade laitue iceberg",g:30},
+  {c:"Légumes natures",n:"Salade laitue romaine",g:30},
+  {c:"Légumes natures",n:"Salade mâche",g:20},
+  {c:"Légumes natures",n:"Salade pourpier",g:30},
+  {c:"Légumes natures",n:"Salade scarole / endive belge",g:30},
+  {c:"Légumes natures",n:"Salade trévise",g:30},
+  {c:"Légumes natures",n:"Salsifis / scorsonère",g:40},
+  {c:"Légumes natures",n:"Taro cru (70 g cuit)",g:25},
+  {c:"Légumes natures",n:"Taro cuit (25 g cru)",g:70},
+  {c:"Légumes natures",n:"Tomate crue (70 g cuite)",g:90},
+  {c:"Légumes natures",n:"Tomate cuite (90 g crue)",g:70},
+  {c:"Légumes natures",n:"Tomate en concentré",g:25},
+  {c:"Légumes natures",n:"Tomate en coulis",g:55},
+  {c:"Légumes natures",n:"Topinambour",g:30},
+  {c:"Légumes champignons",n:"Bolet orange",g:30},
+  {c:"Légumes champignons",n:"Bolet rude",g:30},
+  {c:"Légumes champignons",n:"Cèpe",g:20},
+  {c:"Légumes champignons",n:"Chanterelle / girole",g:30},
+  {c:"Légumes champignons",n:"Oronge",g:165},
+  {c:"Légumes champignons",n:"Pleurote",g:20},
+  {c:"Fruits au sirop",n:"Abricot au sirop",g:75},
+  {c:"Fruits au sirop",n:"Airelles au sirop",g:115},
+  {c:"Fruits au sirop",n:"Ananas au sirop",g:220},
+  {c:"Fruits au sirop",n:"Cerises au sirop",g:95},
+  {c:"Fruits au sirop",n:"Figues au sirop",g:220},
+  {c:"Fruits au sirop",n:"Fraises au sirop",g:125},
+  {c:"Fruits au sirop",n:"Framboises au sirop",g:90},
+  {c:"Fruits au sirop",n:"Litchis au sirop",g:40},
+  {c:"Fruits au sirop",n:"Mandarines au sirop",g:135},
+  {c:"Fruits au sirop",n:"Myrtilles au sirop",g:85},
+  {c:"Fruits au sirop",n:"Pamplemousse au sirop",g:60},
+  {c:"Fruits au sirop",n:"Pêches au sirop",g:145},
+  {c:"Fruits au sirop",n:"Poires au sirop",g:1000},
+  {c:"Fruits au sirop",n:"Prunes au sirop",g:665},
+  {c:"Fruits au sirop",n:"Raisins au sirop",g:195}
+];
+var tV={0.1:625,0.2:315,0.3:210,0.4:155,0.5:125,0.6:105,0.7:90,0.8:65,0.9:60,1.0:55,1.1:50,1.2:45,1.3:40,1.4:40,1.5:35,1.6:35,1.7:30,1.8:30,1.9:30,2.0:25};
+var tR={0.3:130,0.4:100,0.5:80,0.6:70,0.7:60,0.8:50,0.9:45,1.0:40,1.1:35,1.2:35,1.3:30,1.4:30,1.5:25,1.6:25,1.7:25,1.8:20,1.9:20,2.0:20,2.1:20,2.2:20,2.3:15,2.4:15,2.5:15};
+var F=A.slice(),selIdx=-1;
+function go(id){document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active')});document.getElementById(id).classList.add('active');window.scrollTo(0,0);}
+function renderList(arr){
+  var s=document.getElementById('m1-aliment');s.innerHTML='';var lc='';
+  arr.forEach(function(a,i){
+    if(a.c!==lc){var og=document.createElement('optgroup');og.label='— '+a.c+' —';s.appendChild(og);lc=a.c;}
+    var op=document.createElement('option');op.value=i;op.textContent=a.n+' ('+a.g+' g = 1 part)';s.lastChild.appendChild(op);
+  });
+}
+function filterAliments(){
+  var q=document.getElementById('m1-search').value.toLowerCase().trim();
+  F=q?A.filter(function(a){return a.n.toLowerCase().includes(q);}) :A.slice();
+  renderList(F);document.getElementById('m1-info').style.display='none';selIdx=-1;updM1();
+}
+function onSelect(){
+  var s=document.getElementById('m1-aliment');if(s.value==='')return;
+  selIdx=parseInt(s.value);var a=F[selIdx];
+  if(a){var inf=document.getElementById('m1-info');inf.textContent='✔ '+a.n+' : '+a.g+' g = 1 part';inf.style.display='block';}
+  updM1();
+}
+function sliderUpdate(m){
+  var v=document.getElementById(m+'-slider').value;
+  document.getElementById(m+'-sv').textContent=v;
+  if(m==='m1')updM1();else calcLive(m);
+}
+function updM1(){
+  var p=parseInt(document.getElementById('m1-slider').value);
+  if(selIdx<0||!F[selIdx]){document.getElementById('m1-parts').textContent='—';document.getElementById('m1-mg').textContent='Sélectionnez un aliment';document.getElementById('m1-ref').textContent='';return;}
+  var a=F[selIdx],parts=p/a.g,mg=parts*20;
+  document.getElementById('m1-parts').textContent=parts.toFixed(2);
+  document.getElementById('m1-mg').textContent=Math.round(mg)+' mg de phénylalanine';
+  document.getElementById('m1-ref').textContent='Référence : '+a.g+' g = 1 part · Source SFEIM 2009';
+}
+function calcLive(m){
+  var tbl=m==='m2'?tV:tR;
+  document.getElementById(m+'-err').style.display='none';
+  var pr=parseFloat(document.getElementById(m+'-prot').value);
+  var po=parseInt(document.getElementById(m+'-slider').value);
+  if(isNaN(pr)||document.getElementById(m+'-prot').value===''){document.getElementById(m+'-parts').textContent='—';document.getElementById(m+'-mg').textContent='Entrez le taux de protéines';document.getElementById(m+'-ref').textContent='';return;}
+  var pk=Math.round(pr*10)/10,g1=tbl[pk];
+  if(!g1){document.getElementById(m+'-err').style.display='block';document.getElementById(m+'-parts').textContent='—';document.getElementById(m+'-mg').textContent='Valeur hors plage';document.getElementById(m+'-ref').textContent='';return;}
+  var parts=po/g1,mg=parts*20;
+  document.getElementById(m+'-parts').textContent=parts.toFixed(2);
+  document.getElementById(m+'-mg').textContent=Math.round(mg)+' mg de phénylalanine';
+  document.getElementById(m+'-ref').textContent=pk+' g prot/100g · '+g1+' g = 1 part · Source phenylcetonurie.org';
+}
+renderList(A);
+</script>
+</body>
+</html>
