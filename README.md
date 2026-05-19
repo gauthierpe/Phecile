@@ -28,8 +28,10 @@ Fonctionnalités
 
 Sources des données
 
-Consensus national SFEIM 2009 — Diététiciens SFEIM (Société Française des Erreurs Innées du Métabolisme) : https://filiere-g2m.fr/education-therapeutique-du-patient/outils-pedagogiques/liste-des-parts-de-proteines-et-acides-amines
-Tableaux du Phetout — phenylcetonurie.org : https://phenylcetonurie.org/WordPress3/wp-content/uploads/2025/08/PHETOUT-multiple-pour-parents-2.pdf
+Cette webapp n'a pas d'intelligence propre, ni de puissance de calcul. Elle permet simplement un affichage plus sympa des tableaux d'équivalence (excel ou pdf) fournis par les équipes de suivi. 
+
+- Consensus national SFEIM 2009 — Diététiciens SFEIM (Société Française des Erreurs Innées du Métabolisme) : https://filiere-g2m.fr/education-therapeutique-du-patient/outils-pedagogiques/liste-des-parts-de-proteines-et-acides-amines
+- Tableaux du Phetout — phenylcetonurie.org : https://phenylcetonurie.org/WordPress3/wp-content/uploads/2025/08/PHETOUT-multiple-pour-parents-2.pdf
 
 
 
