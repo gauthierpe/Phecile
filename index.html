@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Phé-cile — Calculateur PCU</title>
-<meta name="description" content="La Phé facile ! Calculer les parts de phénylalanine — France, 1part = 20mg">
+<title>Phé-cile — Calculateur PKU</title>
+<meta name="description" content="La Phé facile ! Calculer les parts de phénylalanine — France, 1 part = 20 mg">
 <meta name="theme-color" content="#0BBFBF">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -142,7 +142,7 @@ option{padding:4px 6px;color:#1a1a1a}
   <div class="home-hdr">
     <div class="logo">Phé-<span>cile</span></div>
     <div class="slogan">la Phé facile !</div>
-    <p class="tagline">L'interface pour facilement calculer les parts de phénylalanine<em>(en parts pour la France, 1part = 20mg de phé)</em></p>
+    <p class="tagline">L'application pour facilement calculer les parts de phénylalanine<em>(mode de calcul en parts pour la France, 1 part = 20 mg de phé)</em></p>
   </div>
 
   <button class="add-btn" onclick="go('s-add')">
@@ -161,8 +161,8 @@ option{padding:4px 6px;color:#1a1a1a}
       <span>Sources : Consensus SFEIM 2009 — Tableaux du Phetout — phenylcetonurie.org<br>Application non médicale — toujours vérifier avec votre diététicien(ne)</span>
     </div>
     <div class="ic hrt">
-      <div class="ic-row"><span class="ic-i">&#10084;</span><span>Application faite maison par une maman d'enfant PCU pour aider le quotidien</span></div>
-      <div class="ic-row"><span style="font-size:15px;flex-shrink:0">&#128187;</span><span>Le code en open source : <a href="https://github.com/eneky86/Phecile" target="_blank" class="code-link">Voir le code source</a></span></div>
+      <div class="ic-row"><span class="ic-i">&#10084;</span><span>Application faite maison par une maman d'enfant PKU pour aider le quotidien</span></div>
+      <div class="ic-row"><span style="font-size:15px;flex-shrink:0">&#128187;</span><span>Voici le code en open source si besoin : <a href="https://github.com/eneky86/Phecile" target="_blank" class="code-link">Voir le code source</a></span></div>
     </div>
   </div>
 </div>
@@ -382,7 +382,7 @@ function checkProt(m){
   var pk=Math.round(pr*10)/10;
   var g1=tbl[pk];
   if(!g1){errEl.style.display='block';}
-  else{okEl.textContent='✔ Taux valide · '+g1+' g = 1part (20mg de phé)';okEl.style.display='block';}
+  else{okEl.textContent='✔ Taux valide · '+g1+' g = 1 part (20 mg de phé)';okEl.style.display='block';}
 }
 
 /* ── Ajout d'un aliment à la liste ── */
@@ -398,7 +398,7 @@ function addFromM2(){
   if(!name){showToast('⚠ Entrez un nom pour cet aliment');return;}
   var pk=Math.round(pr*10)/10;
   var g1=tV[pk];
-  if(!g1){showToast('⚠ Taux de protéines hors plage, cet aliment n'est peut-être pas adapté au régime. Vérifiez auprès de votre diététicien(ne).');return;}
+  if(!g1){showToast('⚠ Taux de protéines hors plage');return;}
   saveFood({name:name, mode:'gn', g1part:g1, poids:Math.min(g1,100)});
   document.getElementById('m2-name').value='';document.getElementById('m2-prot').value='';
   document.getElementById('m2-ok').style.display='none';
@@ -410,7 +410,7 @@ function addFromM3(){
   if(!name){showToast('⚠ Entrez un nom pour cet aliment');return;}
   var pk=Math.round(pr*10)/10;
   var g1=tR[pk];
-  if(!g1){showToast('⚠ Taux de protéines hors plage, cet aliment n'est peut-être pas adapté au régime. Vérifiez auprès de votre diététicien(ne).');return;}
+  if(!g1){showToast('⚠ Taux de protéines hors plage');return;}
   saveFood({name:name, mode:'co', g1part:g1, poids:Math.min(g1,100)});
   document.getElementById('m3-name').value='';document.getElementById('m3-prot').value='';
   document.getElementById('m3-ok').style.display='none';
